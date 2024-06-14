@@ -1,4 +1,4 @@
-package com.heima.user.common.exception;
+package com.heima.common.exception;
 
 
 import com.heima.model.common.dtos.ResponseResult;
