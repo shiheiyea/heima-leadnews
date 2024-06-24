@@ -19,6 +19,12 @@ public class ApUserLoginController {
     @Autowired
     private ApUserService apUserService;
 
+    /**
+     * 用户登录
+     *
+     * @param dto
+     * @return
+     */
     @PostMapping("/login_auth")
     @ApiOperation("用户登录")
     public ResponseResult login(@RequestBody LoginDto dto) {

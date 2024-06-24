@@ -6,7 +6,6 @@ import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
 import com.heima.model.user.dtos.LoginDto;
 import com.heima.model.user.pojos.ApUser;
-import com.heima.model.user.vos.LoginVo;
 import com.heima.user.mapper.ApUserMapper;
 import com.heima.user.service.ApUserService;
 import com.heima.user.utils.common.AppJwtUtil;
@@ -17,7 +16,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
-import java.sql.Wrapper;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,15 +49,18 @@ public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> impleme
             }
 
             // 1.3 返回数据 jwt user
-            String token = AppJwtUtil.getToken(dbUser.getId().longValue());
-            LoginVo loginVo = LoginVo.builder().token(token).build();
-            BeanUtils.copyProperties(dbUser, loginVo);
+            Map<String, Object> map = new HashMap<>();
+            map.put("token", AppJwtUtil.getToken(dbUser.getId().longValue()));
+            dbUser.setSalt("");
+            dbUser.setPassword("");
+            map.put("user", dbUser);
 
-            return ResponseResult.okResult(loginVo);
+            return ResponseResult.okResult(map);
         } else {
             // 2.游客登录
-            LoginVo loginVo = LoginVo.builder().token(AppJwtUtil.getToken(0L)).build();
-            return ResponseResult.okResult(loginVo);
+            Map<String, Object> map = new HashMap<>();
+            map.put("token", AppJwtUtil.getToken(0L));
+            return ResponseResult.okResult(map);
         }
     }
 }

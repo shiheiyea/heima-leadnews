@@ -14,9 +14,8 @@ import org.springframework.context.annotation.Bean;
 @EnableDiscoveryClient
 @MapperScan("com.heima.article.mapper")
 public class ArticleApplication {
-
     public static void main(String[] args) {
-        SpringApplication.run(ArticleApplication.class,args);
+        SpringApplication.run(ArticleApplication.class, args);
     }
 
     @Bean
