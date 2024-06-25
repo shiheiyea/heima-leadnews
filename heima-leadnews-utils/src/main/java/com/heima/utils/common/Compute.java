@@ -1,4 +1,4 @@
-package com.heima.user.utils.common;
+package com.heima.utils.common;
 
 import javax.swing.border.TitledBorder;
 import java.text.NumberFormat;
