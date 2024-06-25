@@ -10,7 +10,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 @MapperScan("com.heima.wemedia.mapper")
 public class WemediaApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(WemediaApplication.class,args);
     }
