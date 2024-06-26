@@ -4,6 +4,7 @@ package com.heima.common.exception;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.math3.exception.MaxCountExceededException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
