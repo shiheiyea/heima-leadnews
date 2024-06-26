@@ -2,9 +2,7 @@ package com.heima.wemedia.controller.v1;
 
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.wemedia.dtos.WmMaterialDto;
-import com.heima.model.wemedia.pojos.WmMaterial;
 import com.heima.wemedia.service.WmMaterialService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +24,7 @@ public class WmMaterialController {
 
     @PostMapping("/list")
     public ResponseResult findList(@RequestBody WmMaterialDto dto) {
-        return null;
+        return wmMaterialService.findList(dto);
     }
 }
 
