@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/vi/channel")
+@RequestMapping("/api/v1/channel")
 public class WmChannelController {
 
     @Autowired
     private WmChannelService wmChannelService;
 
-    @GetMapping("/channel")
+    @GetMapping("/channels")
     public ResponseResult findAll() {
         return wmChannelService.findAll();
     }
