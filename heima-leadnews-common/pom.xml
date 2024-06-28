@@ -90,6 +90,12 @@
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-green</artifactId>
         </dependency>
+        <!-- 阿里云内容审核 -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>green20220302</artifactId>
+            <version>2.2.5</version>
+        </dependency>
         <!--HBase-->
         <dependency>
             <groupId>org.apache.hbase</groupId>
