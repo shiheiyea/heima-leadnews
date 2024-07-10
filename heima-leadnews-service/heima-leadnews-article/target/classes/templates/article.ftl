@@ -171,7 +171,7 @@
 <!-- 引入 Vue 和 Vant 的 JS 文件 -->
 <script src=" https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js">
 </script>
-<script src="https://cdn.jsdelivr.net/npm/vant@2.12.20/lib/vant.min.js"></script>
+<script src="https://unpkg.zhimg.com/vue@2.7.16/dist/vue.min.js"></script>
 <!-- 引入 Axios 的 JS 文件 -->
 <#--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 <script src="../../../plugins/js/axios.min.js"></script>
