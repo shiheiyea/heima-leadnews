@@ -1,8 +1,6 @@
 server:
   port: 51802
 spring:
-  autoconfigure:
-    exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
   application:
     name: leadnews-article
   cloud:
